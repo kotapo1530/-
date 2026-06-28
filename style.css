@@ -1,0 +1,59 @@
+:root{
+  --navy:#0e1230; --navy2:#1b1640; --card:#191a36; --card2:#22244a;
+  --gold:#f5c451; --cyan:#3fd0c8; --mag:#ff5e8a; --txt:#f3f2fb; --mut:#a6a3c4;
+  --ok:#3fd07a; --line:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--navy);color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;}
+body{max-width:520px;margin:0 auto;padding:0 14px 60px;background:
+  radial-gradient(120% 60% at 0% 0%,rgba(255,94,138,.10),transparent 50%),
+  radial-gradient(120% 60% at 100% 30%,rgba(63,208,200,.10),transparent 50%),var(--navy);}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 4px 10px;position:sticky;top:0;
+  background:linear-gradient(var(--navy),rgba(14,18,48,.92));backdrop-filter:blur(6px);z-index:5}
+.logo{display:flex;align-items:center;gap:8px;font-size:18px;font-weight:700}
+.logo .dot{width:26px;height:26px;border-radius:50%;background:var(--gold)}
+.streak{font-size:13px;color:var(--mut)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0 16px}
+.stat{background:var(--card);border-radius:14px;padding:10px 12px}
+.stat b{display:block;font-size:22px;margin-top:2px}
+.stat span{font-size:12px;color:var(--mut)}
+.sec{font-size:13px;color:var(--mut);margin:18px 4px 8px;display:flex;align-items:center;gap:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:12px}
+.card.today{border:2px solid var(--cyan)}
+.crow{display:flex;gap:12px;padding:12px}
+.thumb{width:90px;height:160px;border-radius:12px;object-fit:cover;flex-shrink:0;background:var(--card2)}
+.cmeta{flex:1;min-width:0}
+.ctitle{font-size:17px;font-weight:700}
+.cgenre{display:inline-block;background:var(--mag);color:#fff;font-size:12px;font-weight:700;
+  padding:2px 12px;border-radius:20px;margin:4px 0}
+.ctime{font-size:13px;color:var(--mut);display:flex;align-items:center;gap:5px;margin:6px 0 10px}
+.btnrow{display:flex;gap:8px;margin-bottom:8px}
+button,.btn{font:inherit;border:none;border-radius:12px;padding:11px 8px;font-size:14px;font-weight:700;
+  background:var(--card2);color:var(--txt);cursor:pointer;flex:1;text-align:center;text-decoration:none;
+  display:flex;align-items:center;justify-content:center;gap:6px;transition:transform .08s}
+button:active,.btn:active{transform:scale(.96)}
+.btn.primary{background:var(--gold);color:#2a2208}
+.btn.full{width:100%;flex:none}
+.copybar{display:flex;gap:8px;padding:0 12px 12px}
+.copybar button{font-size:13px;padding:10px 6px}
+.toggles{display:flex;border-top:1px solid var(--line)}
+.tg{flex:1;padding:13px 0;text-align:center;font-size:14px;font-weight:700;color:var(--mut);
+  background:none;border:none;border-right:1px solid var(--line);border-radius:0;cursor:pointer}
+.tg:last-child{border-right:none}
+.tg.on{color:var(--ok)}
+.tg .lab{font-size:11px;display:block;margin-top:2px;font-weight:400}
+.mini{display:flex;align-items:center;gap:12px;padding:10px;background:var(--card);
+  border:1px solid var(--line);border-radius:14px;margin-bottom:8px}
+.mini .sw{width:38px;height:38px;border-radius:8px;flex-shrink:0}
+.mini .mt{flex:1;min-width:0}
+.mini .mt b{font-size:14px}.mini .mt span{font-size:12px;color:var(--mut);display:block}
+.dots{display:flex;gap:6px}
+.dots i{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,.18)}
+.dots i.on{background:var(--ok)}
+.pill{font-size:11px;color:var(--mut);border:1px solid var(--line);padding:3px 9px;border-radius:20px}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(80px);
+  background:var(--ok);color:#062a14;font-weight:700;padding:12px 22px;border-radius:30px;
+  opacity:0;transition:.25s;z-index:20;font-size:14px}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.soon{opacity:.55}

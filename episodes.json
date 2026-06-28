@@ -1,0 +1,39 @@
+{
+  "brand": "ホー博士のまいにちクイズ",
+  "episodes": [
+    {
+      "id": "ep1",
+      "title": "エベレスト",
+      "genre": "地理",
+      "scheduled": "2026-06-28T19:00",
+      "video": "videos/ep1.mp4",
+      "thumb": "thumbs/ep1.png",
+      "ready": true,
+      "captions": {
+        "youtube": "世界で一番高い山、わかる？🤔\n3秒で答えてね！\n\n答えはコメントで答え合わせ👇\n毎日クイズ配信中⭐\n\n#shorts #クイズ #雑学 #地理 #ホー博士のクイズ",
+        "tiktok": "世界一高い山わかる？😳 当てられたらコメントで教えて！\n\n#fyp #おすすめ #クイズ #雑学 #地理 #quiz #毎日投稿",
+        "instagram": "世界で一番高い山は？答えはコメントで！\n.\n毎日クイズ更新中⭐ フォローして挑戦してね\n.\n#reels #クイズ #雑学 #地理 #リール #毎日投稿"
+      }
+    },
+    {
+      "id": "ep2",
+      "title": "国旗クイズ",
+      "genre": "国旗",
+      "scheduled": "2026-06-29T19:00",
+      "video": null,
+      "thumb": null,
+      "ready": false,
+      "captions": { "youtube": "", "tiktok": "", "instagram": "" }
+    },
+    {
+      "id": "ep3",
+      "title": "まちがい探し",
+      "genre": "観察",
+      "scheduled": "2026-06-30T19:00",
+      "video": null,
+      "thumb": null,
+      "ready": false,
+      "captions": { "youtube": "", "tiktok": "", "instagram": "" }
+    }
+  ]
+}
