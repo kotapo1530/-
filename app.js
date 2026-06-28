@@ -50,8 +50,8 @@ function todayCard(e){
         <div class="ctitle">${e.id} ${e.title}</div>
         <div class="ctime">🕖 ${fmt(e.scheduled)} 予定</div>
         <div class="btnrow">
-          ${ready?`<a class="btn primary" href="${e.video}" download="${e.id}.mp4">⬇ 動画</a>
-          <a class="btn" href="${e.thumb}" download="${e.id}.png">⬇ サムネ</a>`
+          ${ready?`<a class="btn primary" href="${e.video}" target="_blank" rel="noopener" download="${e.id}.mp4">⬇ 動画</a>
+          <a class="btn" href="${e.thumb}" target="_blank" rel="noopener" download="${e.id}.png">⬇ サムネ</a>`
           :`<span class="btn" style="opacity:.5">準備中</span>`}
         </div>
       </div>
