@@ -56,8 +56,9 @@ function todayCard(e){
         </div>
       </div>
     </div>
-    ${ready?`<div class="copybar">
-      ${PLAT.map(p=>`<button data-copy="${e.id}" data-p="${p.key}">📋 ${p.label}</button>`).join("")}
+    ${ready?`<div class="copybar"><button data-copy="${e.id}" data-p="youtube_title" style="background:var(--gold);color:#2a2208">📋 YouTubeタイトル</button></div>
+    <div class="copybar">
+      ${PLAT.map(p=>`<button data-copy="${e.id}" data-p="${p.key}">📋 ${p.label}本文</button>`).join("")}
     </div>`:""}
     <div class="toggles">${toggleRow(e.id)}</div>
   </div>`;
