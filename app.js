@@ -98,7 +98,7 @@ function render(){
   const doneDays=new Set(ready.filter(allPosted).map(e=>new Date(e.scheduled).toDateString()));
   let s=0,cur=new Date();
   while(doneDays.has(cur.toDateString())){s++;cur.setDate(cur.getDate()-1);}
-  document.getElementById("streak").textContent=`連続 ${s}日`;
+  const sk=document.getElementById("streak"); if(sk) sk.textContent=`連続 ${s}日`;
 }
 
 document.addEventListener("click",e=>{
