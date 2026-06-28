@@ -113,3 +113,11 @@ fetch("episodes.json").then(r=>r.json()).then(d=>{DATA=d;render();})
   .catch(()=>{document.getElementById("list").innerHTML='<p style="color:#a6a3c4">episodes.json を読み込めませんでした。</p>';});
 
 if("serviceWorker" in navigator){ navigator.serviceWorker.register("sw.js").catch(()=>{}); }
+
+const _rf=document.getElementById("refresh");
+if(_rf) _rf.addEventListener("click", async ()=>{
+  _rf.textContent="⏳";
+  try{ const ks=await caches.keys(); await Promise.all(ks.map(k=>caches.delete(k))); }catch(e){}
+  try{ const rs=await navigator.serviceWorker.getRegistrations(); await Promise.all(rs.map(r=>r.unregister())); }catch(e){}
+  location.reload();
+});
